@@ -2,11 +2,20 @@
 
 ## Introduction
 
-Road following, a fundamental aspect of autonomous vehicle navigation, involves the implementation of control algorithms that enable a robot to detect and follow a predefined path. The task requires an understanding of basic robotic principles, sensor integration, and algorithmic control. CoppeliaSim, a versatile and powerful robotics simulation platform, will be utilized for this purpose. It allows for realistic modeling of robotic sensors and motion, offering an ideal environment for testing and refining road following algorithms. In conjunction with CoppeliaSim, Python programming is used to create and control robotic models.
+Road following, a fundamental aspect of autonomous vehicle navigation, involves the implementation of control algorithms that enable a robot to detect and follow a predefined path.
+The task requires an understanding of basic robotic principles, sensor integration, and algorithmic control.
+CoppeliaSim, a versatile and powerful robotics simulation platform, will be utilized for this purpose.
+It allows for realistic modeling of robotic sensors and motion, offering an ideal environment for testing and refining road following algorithms.
+In conjunction with CoppeliaSim, Python programming is used to create and control robotic models.
 
 ![alt text](./images/robot.png)
 
 _Figure 1: Four-Wheel Differential Drive Robot_
+
+## Downloads
+
+- CoppeliaSim: [Download](https://www.coppeliarobotics.com)
+- Scene File: [Download](./files/MultiRobot.ttt)
 
 ## CoppeliaSim
 
@@ -35,6 +44,12 @@ You can download the $edu$ version from the official site - (https://www.coppeli
 
 Verify that the installation is successful by launching CoppeliaSim and exploring its basic features.
 
+CoppeliaSim requires ZMQ and cbor2 libraries to be installed in your Python environment. You can install them using the following commands:
+
+```bash
+pip install cbor2 pyzmq
+```
+
 **Scene Preparation:** A custom scene with multiple robots has been prepared for this lab.
 Upon starting CoppeliaSim, load the provided scene file. This file contains predefined paths and robot models set up for the road following task.
 
@@ -47,13 +62,7 @@ If not already installed, set up Python on your system. Python 3.x is recommende
 **Library Installation:** Install the CoppeliaSim Python API. This library is crucial for interfacing with CoppeliaSim from Python scripts.
 
 ```
-python3 -m pip install coppeliasim-zmqremoteapi-client
-```
-
-You will also need additional libraries like numpy for numerical operations and opencv for image processing. Install these using a package manager like pip or conda.
-
-```
-conda install conda-forge::opencv
+python3 -m pip install coppeliasim-zmqremoteapi-client, opencv-contrib-python, pynpu, numpy
 ```
 
 **API Testing:** Test the Python-to-CoppeliaSim connection by running a basic script that interacts with the simulation, such as starting and stopping the simulation.
@@ -61,7 +70,8 @@ This setup provides the foundation for you to start developing and testing your 
 
 ## Road Following Algorithm Development
 
-**Algorithmic Foundation:** The core of your task is to develop an algorithm that enables a simulated robot to follow a designated path. You may opt for various approaches such as sensor-based line following, computer vision techniques, or even basic AI algorithms.
+**Algorithmic Foundation:** The core of your task is to develop an algorithm that enables a simulated robot to follow a designated path.
+You may opt for various approaches such as sensor-based line following, computer vision techniques, or even basic AI algorithms.
 
 **Sensor Integration:** Utilize the simulated vision sensors in CoppeliaSim to detect the path.
 
@@ -111,11 +121,7 @@ Ensure your script follows a consistent coding style for ease of reading and mai
 ### Evaluation Criteria
 
 1. Accuracy and Functionality: The robot's ability to follow the designated path accurately and consistently
-
 2. Smoothness of navigation
-
 3. Well-structured and logically organized code.
-
 4. Comprehensive comments explaining the purpose and logic of the code.
-
 5. Quality of report.
