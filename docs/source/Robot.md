@@ -1,25 +1,12 @@
-<<<<<<< HEAD:Modelling_Flow.md
 # Lab 3 – Road Following in CoppeliaSim:  An Introduction to Robotic Navigation
-=======
-# Road Following Robot
->>>>>>> 55cb367343b525aa6e49e9e845e9bcba42fa83c7:docs/source/Robot.md
 
 ## Introduction
 
-Road following, a fundamental aspect of autonomous vehicle navigation, involves the implementation of control algorithms that enable a robot to detect and follow a predefined path.
-The task requires an understanding of basic robotic principles, sensor integration, and algorithmic control.
-CoppeliaSim, a versatile and powerful robotics simulation platform, will be utilized for this purpose.
-It allows for realistic modeling of robotic sensors and motion, offering an ideal environment for testing and refining road following algorithms.
-In conjunction with CoppeliaSim, Python programming is used to create and control robotic models.
+Road following, a fundamental aspect of autonomous vehicle navigation, involves the implementation of control algorithms that enable a robot to detect and follow a predefined path. The task requires an understanding of basic robotic principles, sensor integration, and algorithmic control. CoppeliaSim, a versatile and powerful robotics simulation platform, will be utilized for this purpose. It allows for realistic modeling of robotic sensors and motion, offering an ideal environment for testing and refining road following algorithms. In conjunction with CoppeliaSim, Python programming is used to create and control robotic models.
 
-![alt text](./images/robot.png)
+![alt text](images/robot.png)
 
 _Figure 1: Four-Wheel Differential Drive Robot_
-
-## Downloads
-
-- CoppeliaSim: [Download](https://www.coppeliarobotics.com)
-- Scene File: [Download](./files/MultiRobot.ttt)
 
 ## CoppeliaSim
 
@@ -43,16 +30,10 @@ This robust suite of features positions CoppeliaSim as an ideal tool for explori
 
 ### Setting Up CoppeliaSim
 
-Ensure CoppeliaSim is installed on your system.
+Ensure CoppeliaSim is installed on your system. 
 You can download the $edu$ version from the official site - (https://www.coppeliarobotics.com/downloads)
 
 Verify that the installation is successful by launching CoppeliaSim and exploring its basic features.
-
-CoppeliaSim requires ZMQ and cbor2 libraries to be installed in your Python environment. You can install them using the following commands:
-
-```bash
-pip install cbor2 pyzmq
-```
 
 **Scene Preparation:** A custom scene with multiple robots has been prepared for this lab.
 Upon starting CoppeliaSim, load the provided scene file. This file contains predefined paths and robot models set up for the road following task.
@@ -66,20 +47,20 @@ If not already installed, set up Python on your system. Python 3.x is recommende
 **Library Installation:** Install the CoppeliaSim Python API. This library is crucial for interfacing with CoppeliaSim from Python scripts.
 
 ```
-python3 -m pip install coppeliasim-zmqremoteapi-client, opencv-contrib-python, pynpu, numpy
+python3 -m pip install coppeliasim-zmqremoteapi-client
+```
+You will also need additional libraries like numpy for numerical operations and opencv for image processing. Install these using a package manager like pip or conda. 
+
+```
+conda install conda-forge::opencv
 ```
 
-**API Testing:** Test the Python-to-CoppeliaSim connection by running a basic script that interacts with the simulation, such as starting and stopping the simulation.
+**API Testing:** Test the Python-to-CoppeliaSim connection by running a basic script that interacts with the simulation, such as starting and stopping the simulation. 
 This setup provides the foundation for you to start developing and testing your road following algorithms in a controlled simulation environment. The next section will guide you through the development of the road following algorithm.
 
 ### Getting started with CopeliaSim and python programming
 
-<<<<<<< HEAD:Modelling_Flow.md
 ZeroMQ Remote API interface provided by CoppeliaSim which allows a more Pythonic interaction with CoppeliaSim objects. Below are some of the key API handles to get started:
-=======
-**Algorithmic Foundation:** The core of your task is to develop an algorithm that enables a simulated robot to follow a designated path.
-You may opt for various approaches such as sensor-based line following, computer vision techniques, or even basic AI algorithms.
->>>>>>> 55cb367343b525aa6e49e9e845e9bcba42fa83c7:docs/source/Robot.md
 
 -  **self.sim.getObject** : Retrieves an object handle based on its path and alias
     ```
@@ -133,9 +114,13 @@ Ensure your script follows a consistent coding style for ease of reading and mai
 ### Evaluation Criteria
 
 1. Accuracy and Functionality: The robot's ability to follow the designated path accurately and consistently
+
 2. Smoothness of navigation
+
 3. Well-structured and logically organized code.
+
 4. Comprehensive comments explaining the purpose and logic of the code.
+
 5. Quality of report.
 
 ## References
