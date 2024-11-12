@@ -1,4 +1,4 @@
-# Lab 3 – Road Following in CoppeliaSim:  An Introductionto Robotic Navigation
+# Lab 3 – Road Following in CoppeliaSim:  An Introduction to Robotic Navigation
 
 ## Introduction
 
@@ -58,24 +58,28 @@ conda install conda-forge::opencv
 **API Testing:** Test the Python-to-CoppeliaSim connection by running a basic script that interacts with the simulation, such as starting and stopping the simulation. 
 This setup provides the foundation for you to start developing and testing your road following algorithms in a controlled simulation environment. The next section will guide you through the development of the road following algorithm.
 
-## Road Following Algorithm Development
+### Getting started with CopeliaSim and python programming
 
-**Algorithmic Foundation:** The core of your task is to develop an algorithm that enables a simulated robot to follow a designated path. You may opt for various approaches such as sensor-based line following, computer vision techniques, or even basic AI algorithms.
+ZeroMQ Remote API interface provided by CoppeliaSim which allows a more Pythonic interaction with CoppeliaSim objects. Below are some of the key API handles to get started:
 
-**Sensor Integration:** Utilize the simulated vision sensors in CoppeliaSim to detect the path.
+-  **self.sim.getObject** : Retrieves an object handle based on its path and alias
+    ```
+        # Retrieve the handle of an object (e.g., a motor or sensor)
+        object_handle = self.sim.getObject('/objectName')
+    ```
+    
+    
+- **self.sim.getVisionSensorImg** : Reads the image of a vision sensor. 
+    ```
+        img = self.sim.getVisionSensorImg(self.vision_sensor)
+    ```
 
-**Control Logic:** Develop the control logic that translates sensor input into motor commands.
-This could involve simple steering mechanisms or more complex control systems like PID controllers.
+- **sim.setJointTargetVelocity** : Sends motor speed commands to the robot.
+    ```
+        self.sim.setJointTargetVelocity(self.left_motor, left_speed)
 
-**Programming:** Write your algorithm in Python, ensuring it interfaces effectively with CoppeliaSim through the Remote API.
-Focus on writing clean, well-documented code for ease of understanding and modification.
-Key Concepts and Approaches:
+    ```
 
-**Computer Vision:** Explore image processing techniques like color detection, edge detection, or even neural networks for more advanced implementations.
-
-**Proportional Control:** For simpler paths, a proportional controller might suffice to adjust the robot's steering based on the deviation from the path.
-
-**Debugging and Iteration:** Regularly test your algorithm in the simulation. Be prepared to iterate and debug based on the robot’s performance.
 
 ## Documentation and Reporting
 
@@ -118,3 +122,7 @@ Ensure your script follows a consistent coding style for ease of reading and mai
 4. Comprehensive comments explaining the purpose and logic of the code.
 
 5. Quality of report.
+
+## References
+
+1. https://manual.coppeliarobotics.com/
