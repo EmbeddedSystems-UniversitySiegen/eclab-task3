@@ -12,3 +12,11 @@ Embedded Control Lab: Task 3
     
    Robot.md
    Task_sheet.md
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
