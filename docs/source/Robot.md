@@ -1,4 +1,4 @@
-# Lab 3 – Road Following in CoppeliaSim:  An Introduction to Robotic Navigation
+# Road Following Robot
 
 ## Introduction
 
