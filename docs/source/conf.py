@@ -6,6 +6,12 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
+import os
+import sys
+from sphinx.ext import todo
+
+sys.path.insert(0, os.path.abspath("../../src"))
+
 project = 'Embedded Control Lab'
 copyright = '2024, Universität Siegen'
 author = 'Utkarsh Raj'
@@ -22,6 +28,8 @@ extensions = [
     "myst_parser",
     "sphinx.ext.todo",
 ]
+
+todo_include_todos = True
 
 myst_url_schemes = [
     "http",
@@ -47,3 +55,21 @@ exclude_patterns = []
 html_theme = "sphinx_rtd_theme"
 html_static_path = ['_static']
 html_favicon = "_static/unisiegen.png"
+
+# Function to convert absolute paths to relative paths
+
+
+def convert_todo_path(app, doctree, fromdocname):
+    # Iterate over all nodes in the document tree
+    for node in doctree.traverse(todo.todo_node):
+        source_file = node.source
+        if source_file:
+            # Convert the absolute path to a relative path
+            rel_path = os.path.relpath(source_file, start=app.srcdir)
+            # Update the node's source attribute to the relative path
+            node.source = rel_path
+
+
+# Add the above function to the Sphinx setup
+def setup(app):
+    app.connect("doctree-resolved", convert_todo_path)
