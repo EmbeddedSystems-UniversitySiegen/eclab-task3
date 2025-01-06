@@ -11,6 +11,7 @@ import sys
 from sphinx.ext import todo
 
 sys.path.insert(0, os.path.abspath("../../src"))
+print("Current sys.path:", sys.path)
 
 project = 'Embedded Control Lab'
 copyright = '2024, Universität Siegen'
