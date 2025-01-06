@@ -30,7 +30,7 @@ This robust suite of features positions CoppeliaSim as an ideal tool for explori
 
 ### Setting Up CoppeliaSim
 
-Ensure CoppeliaSim is installed on your system. 
+Ensure CoppeliaSim is installed on your system.
 You can download the $edu$ version from the official site - (https://www.coppeliarobotics.com/downloads)
 
 Verify that the installation is successful by launching CoppeliaSim and exploring its basic features.
@@ -47,39 +47,33 @@ If not already installed, set up Python on your system. Python 3.x is recommende
 **Library Installation:** Install the CoppeliaSim Python API. This library is crucial for interfacing with CoppeliaSim from Python scripts.
 
 ```
-python3 -m pip install coppeliasim-zmqremoteapi-client
-```
-You will also need additional libraries like numpy for numerical operations and opencv for image processing. Install these using a package manager like pip or conda. 
-
-```
-conda install conda-forge::opencv
+pip install -r requirements.txt
 ```
 
-**API Testing:** Test the Python-to-CoppeliaSim connection by running a basic script that interacts with the simulation, such as starting and stopping the simulation. 
+**API Testing:** Test the Python-to-CoppeliaSim connection by running a basic script that interacts with the simulation, such as starting and stopping the simulation.
 This setup provides the foundation for you to start developing and testing your road following algorithms in a controlled simulation environment. The next section will guide you through the development of the road following algorithm.
 
 ### Getting started with CopeliaSim and python programming
 
 ZeroMQ Remote API interface provided by CoppeliaSim which allows a more Pythonic interaction with CoppeliaSim objects. Below are some of the key API handles to get started:
 
--  **self.sim.getObject** : Retrieves an object handle based on its path and alias
-    ```
-        # Retrieve the handle of an object (e.g., a motor or sensor)
-        object_handle = self.sim.getObject('/objectName')
-    ```
-    
-    
-- **self.sim.getVisionSensorImg** : Reads the image of a vision sensor. 
-    ```
-        img = self.sim.getVisionSensorImg(self.vision_sensor)
-    ```
+- **self.sim.getObject** : Retrieves an object handle based on its path and alias
+  ```
+      # Retrieve the handle of an object (e.g., a motor or sensor)
+      object_handle = self.sim.getObject('/objectName')
+  ```
+- **self.sim.getVisionSensorImg** : Reads the image of a vision sensor.
+
+  ```
+      img = self.sim.getVisionSensorImg(self.vision_sensor)
+  ```
 
 - **sim.setJointTargetVelocity** : Sends motor speed commands to the robot.
-    ```
-        self.sim.setJointTargetVelocity(self.left_motor, left_speed)
 
-    ```
+  ```
+      self.sim.setJointTargetVelocity(self.left_motor, left_speed)
 
+  ```
 
 ## Documentation and Reporting
 
