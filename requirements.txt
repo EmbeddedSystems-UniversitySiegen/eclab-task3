@@ -1,3 +1,4 @@
 coppeliasim-zmqremoteapi-client
 opencv-python
 numpy
+pytest
