@@ -58,6 +58,11 @@ html_static_path = ['_static']
 html_favicon = "_static/unisiegen.png"
 
 # Function to convert absolute paths to relative paths
+# Mock third-party modules that are not available during the build
+autodoc_mock_imports = [
+    "coppeliasim_zmqremoteapi_client",
+    "cv2",
+]
 
 
 def convert_todo_path(app, doctree, fromdocname):
