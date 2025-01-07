@@ -34,7 +34,7 @@ Key Concepts and Approaches:
 
 **Steering the robot**
 
-- Implement the **handle_camera** method to read the image from camera, calculate the centroid of the road and steer the robot accordingly.
+- Implement the **handle_camera** method to read the image from camera, process the image and steer the robot accordingly.
 
 - Implement the **calculate_steering_angle** method to compute the steering angle based on the deviation of the road centroid from the image center.  
 
