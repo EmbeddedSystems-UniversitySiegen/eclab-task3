@@ -35,8 +35,8 @@ You can download the $edu$ version from the [official site](https://www.coppelia
 
 Verify that the installation is successful by launching CoppeliaSim and exploring its basic features.
 
-**Scene Preparation:** A custom scene with multiple robots has been prepared for this lab. [Download the scene](files/MultiRobot.ttt)
-Upon starting CoppeliaSim, load the provided scene file. This file contains predefined paths and robot models set up for the road-following task.
+**Scene Preparation:** A custom scene with multiple robots has been prepared for this lab. [Download the scene](files/MultiRobot.ttt).
+ Upon starting CoppeliaSim, load the provided scene file. This file contains predefined paths and robot models set up for the road-following task.
 
 Spend some time familiarizing yourself with the CoppeliaSim environment. Understand how to navigate the interface, manipulate objects, and observe robot behavior within the simulation.
 
