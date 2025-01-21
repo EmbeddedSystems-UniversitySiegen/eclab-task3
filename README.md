@@ -21,11 +21,24 @@ py -m venv venv
 pip install -r .\requirements.txt
 
 ```
+## Run the file in the activated virtual environment
 
+```BASH
+Open Command Prompt (or PowerShell)
+cd src
+python ./main.py
+```
+This will connect the python script to coppelia simulator.
 
-Refer to the task documentation for the details. 
+Refer to the task documentation for further details. 
 
 ## Tests
+
+Install pytest as follows in the virtual environment created above.
+
+```BASH
+pip install pytest
+```
 
 Run tests using pytest.
 
